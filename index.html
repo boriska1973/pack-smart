@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>PackSmart — Pack Perfectly Every Trip</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="global.js" defer></script>
+</head>
+<body class="page-home">
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="PackSmart home">
+      <!-- simple suitcase svg logo -->
+      <svg viewBox="0 0 64 64" width="44" height="44" aria-hidden="true">
+        <rect x="8" y="18" width="48" height="34" rx="4" fill="#1f6feb"></rect>
+        <rect x="20" y="8" width="24" height="12" rx="3" fill="#84b6ff"></rect>
+        <rect x="14" y="30" width="6" height="8" rx="1.5" fill="#062b5a"></rect>
+      </svg>
+      <span>PackSmart</span>
+    </a>
+
+    <nav class="nav">
+      <a href="index.html" class="nav-link current">Home</a>
+      <a href="pack.html" class="nav-link">Pack</a>
+      <a href="features.html" class="nav-link">Features</a>
+      <a href="about.html" class="nav-link">About</a>
+    </nav>
+
+    <button class="cta" onclick="location.href='pack.html'">Get Started</button>
+    <button class="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main class="hero">
+    <div class="hero-left">
+      <h1 class="hero-title">Pack light. Pack smart. Travel happier.</h1>
+      <p class="hero-sub">Enter your destination, dates, and activities — PackSmart builds a tailored packing list that fits your bag and style.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="pack.html">Create a Packing List</a>
+        <a class="btn btn-ghost" href="features.html">See Features</a>
+      </div>
+
+      <ul class="quick-features">
+        <li>Weather-aware lists</li>
+        <li>Carry-on optimization</li>
+        <li>Group packing sync</li>
+        <li>Printable & shareable</li>
+      </ul>
+    </div>
+
+    <div class="hero-right">
+      <!-- animated interactive suitcase -->
+      <div class="suitcase-wrap">
+        <div class="suitcase">
+          <div class="suitcase-handle"></div>
+          <div class="suitcase-body">
+            <div class="tag">PackSmart</div>
+            <div class="suitcase-sticker sticker-1">🌦️</div>
+            <div class="suitcase-sticker sticker-2">🏕️</div>
+            <div class="suitcase-sticker sticker-3">💼</div>
+          </div>
+        </div>
+
+        <div class="floating-items">
+          <div class="item shirt">👕</div>
+          <div class="item camera">📷</div>
+          <div class="item shoes">👟</div>
+          <div class="item passport">🛂</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="how-it-works">
+    <h2>How PackSmart works — in 3 steps</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-icon">1</div>
+        <h3>Tell us your trip</h3>
+        <p>Where you're going, when, and what you'll do.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon">2</div>
+        <h3>Smart suggestions</h3>
+        <p>We balance weather, activities and luggage size to suggest exactly what you need.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon">3</div>
+        <h3>Pack confidently</h3>
+        <p>Print, share, or save lists — reduce stress and avoid overpacking.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div>© <span id="year"></span> PackSmart — Built for travelers</div>
+    <nav class="footer-nav">
+      <a href="features.html">Features</a>
+      <a href="about.html">About</a>
+      <a href="pack.html">Try it</a>
+    </nav>
+  </footer>
+
+  <script>
+    // small inline script for year & header animation
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // animate hero floating items on load
+    window.addEventListener('load', () => {
+      document.querySelector('.suitcase').classList.add('enter');
+      document.querySelector('.floating-items').classList.add('float-in');
+    });
+  </script>
+</body>
+</html>

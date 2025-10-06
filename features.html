@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>PackSmart — Features</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="global.js" defer></script>
+</head>
+<body class="page-features">
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <svg viewBox="0 0 64 64" width="36" height="36" aria-hidden="true">
+        <rect x="8" y="18" width="48" height="34" rx="4" fill="#1f6feb"></rect>
+        <rect x="20" y="8" width="24" height="12" rx="3" fill="#84b6ff"></rect>
+      </svg>
+      <span>PackSmart</span>
+    </a>
+
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="pack.html" class="nav-link">Pack</a>
+      <a href="features.html" class="nav-link current">Features</a>
+      <a href="about.html" class="nav-link">About</a>
+    </nav>
+
+    <button class="cta" onclick="location.href='pack.html'">Try PackSmart</button>
+    <button class="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main class="container features-grid">
+    <section class="card feature">
+      <h2>Smart Outfit Math</h2>
+      <p>We calculate how many tops/bottoms you need based on trip length and laundry availability — avoid overpacking.</p>
+      <div class="feature-visual">
+        <div class="animated-closet"></div>
+      </div>
+    </section>
+
+    <section class="card feature">
+      <h2>Weather-aware Recommendations</h2>
+      <p>Optionally connect to weather forecasts (demo uses sample data) to add rain jackets or sun hats automatically.</p>
+      <div class="feature-visual">
+        <div class="weather-pulse">☀️ 🌧️ ⛈️</div>
+      </div>
+    </section>
+
+    <section class="card feature">
+      <h2>Carry-on Optimizer</h2>
+      <p>Choose your luggage and PackSmart gives a tight, space-savvy list that fits carry-on rules.</p>
+      <div class="feature-visual">
+        <div class="luggage-stack"></div>
+      </div>
+    </section>
+
+    <section class="card feature">
+      <h2>Group Sync</h2>
+      <p>Keep duplicates off the list by assigning items to travelers in your group (one person brings the charger, etc.).</p>
+      <div class="feature-visual">
+        <div class="group-icons">👥👥👥</div>
+      </div>
+    </section>
+
+    <section class="card feature">
+      <h2>Printable & Shareable</h2>
+      <p>Export to PDF, print a checklist, or copy a JSON share link to coordinate with travel mates.</p>
+    </section>
+
+    <section class="card pricing">
+      <h2>Pricing</h2>
+      <ul>
+        <li><strong>Free</strong> — Basic lists, print & save locally</li>
+        <li><strong>Pro — $3/month</strong> — Photo scanner, outfit rotation, and calendar/flight import</li>
+      </ul>
+      <a class="btn btn-primary" href="pack.html">Start Free</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© PackSmart</div>
+  </footer>
+</body>
+</html>

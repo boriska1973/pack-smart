@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>PackSmart — Create a Packing List</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="global.js" defer></script>
+</head>
+<body class="page-pack">
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <svg viewBox="0 0 64 64" width="36" height="36" aria-hidden="true">
+        <rect x="8" y="18" width="48" height="34" rx="4" fill="#1f6feb"></rect>
+        <rect x="20" y="8" width="24" height="12" rx="3" fill="#84b6ff"></rect>
+      </svg>
+      <span>PackSmart</span>
+    </a>
+
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="pack.html" class="nav-link current">Pack</a>
+      <a href="features.html" class="nav-link">Features</a>
+      <a href="about.html" class="nav-link">About</a>
+    </nav>
+
+    <button class="cta" onclick="location.href='pack.html'">New List</button>
+    <button class="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main class="pack-main container">
+    <aside class="pack-left">
+      <h2>Create your packing list</h2>
+
+      <form id="pack-form" class="card">
+        <label>
+          Destination
+          <input id="destination" name="destination" placeholder="City, Country (e.g., Lisbon, PT)" required />
+        </label>
+
+        <div class="row">
+          <label>
+            From
+            <input id="date-from" type="date" required />
+          </label>
+          <label>
+            To
+            <input id="date-to" type="date" required />
+          </label>
+        </div>
+
+        <label>
+          Activities (check all that apply)
+          <div class="chips">
+            <label><input type="checkbox" value="sightseeing" /> Sightseeing</label>
+            <label><input type="checkbox" value="hiking" /> Hiking</label>
+            <label><input type="checkbox" value="beach" /> Beach</label>
+            <label><input type="checkbox" value="business" /> Business</label>
+            <label><input type="checkbox" value="camping" /> Camping</label>
+            <label><input type="checkbox" value="photography" /> Photography</label>
+          </div>
+        </label>
+
+        <label>
+          Luggage type
+          <select id="luggage">
+            <option value="carry-on">Carry-on (max 8 kg)</option>
+            <option value="checked">Checked bag (20–23 kg)</option>
+            <option value="backpack">Backpack (flexible)</option>
+          </select>
+        </label>
+
+        <label>
+          Travel style
+          <select id="style">
+            <option value="minimal">Minimalist</option>
+            <option value="balanced" selected>Balanced</option>
+            <option value="comfy">Comfort-first</option>
+          </select>
+        </label>
+
+        <label>
+          Packing notes (optional)
+          <textarea id="notes" placeholder="e.g., laundry available every 3 days"></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button id="generate" class="btn btn-primary" type="button">Generate List</button>
+          <button id="clear" class="btn btn-ghost" type="reset">Clear</button>
+        </div>
+      </form>
+
+      <div class="tips card">
+        <h4>Pro tips</h4>
+        <ul>
+          <li>Roll clothes to save space.</li>
+          <li>Pack versatile layers.</li>
+          <li>Place heavier items near the wheels of the suitcase.</li>
+        </ul>
+      </div>
+    </aside>
+
+    <section class="pack-right">
+      <div id="result-area" class="card result hidden">
+        <header class="result-header">
+          <h3 id="list-title">Your Packing List</h3>
+          <div class="result-actions">
+            <button id="save-list" class="btn">Save</button>
+            <button id="print-list" class="btn">Print</button>
+            <button id="copy-json" class="btn">Copy share link</button>
+          </div>
+        </header>
+
+        <div id="list-meta" class="meta"></div>
+
+        <ul id="packing-list" class="packing-list"></ul>
+
+        <div id="estimates" class="estimates">
+          <div><strong>Estimated Items:</strong> <span id="est-count"></span></div>
+          <div><strong>Estimated Weight:</strong> <span id="est-weight"></span></div>
+        </div>
+      </div>
+
+      <div id="empty-state" class="card empty-state">
+        <h3>Start by creating a list</h3>
+        <p>Enter your trip details and hit <strong>Generate List</strong>. Watch the suitcase animate while we "think".</p>
+        <div class="suitcase-small">
+          <div class="suitcase-body small"></div>
+        </div>
+      </div>
+
+      <div class="saved card">
+        <h4>Saved Lists</h4>
+        <ul id="saved-lists"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>PackSmart — Pack with confidence</div>
+    <div class="footer-small">No real API keys required for this demo.</div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
